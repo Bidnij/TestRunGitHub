@@ -13,6 +13,5 @@ public class StandartLoginTest extends BaseTest {
         StandartLogin standartLogin = new StandartLogin(getDriver());
         standartLogin.openPage("login");
         Waiters.treadWaiter(10);
-        Assert.assertEquals(1, 2);
     }
 }
