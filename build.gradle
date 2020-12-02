@@ -36,16 +36,16 @@ repositories {
 }
 
 test {
-    useTestNG()
+//    useTestNG()
 //    test {
 //        useJUnitPlatform()
 //    }
 
-//    useTestNG() {
-//        dependsOn cleanTest
-//        useDefaultListeners = true
-//        suites "src/test/autorization.xml"
-//    }
+    useTestNG() {
+        dependsOn cleanTest
+        useDefaultListeners = true
+        suites "src/test/autorization.xml"
+    }
 
 }
 
