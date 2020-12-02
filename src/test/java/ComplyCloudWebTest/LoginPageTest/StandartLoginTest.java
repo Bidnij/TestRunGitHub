@@ -12,6 +12,9 @@ public class StandartLoginTest extends BaseTest {
     public void EmptyFields() {
         StandartLogin standartLogin = new StandartLogin(getDriver());
         standartLogin.openPage("login");
-        Waiters.treadWaiter(10);
+        Waiters.treadWaiter(2);
+        standartLogin.getUsernameField().sendKeys("");
+        standartLogin.getLoginButton().click();
+        Assert.assertEquals(getDriver().getCurrentUrl(), "sdfsdf");
     }
 }

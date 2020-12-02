@@ -9,5 +9,14 @@ public class StandartLogin extends BasePage {
     public StandartLogin(WebDriver driver) { super(driver); }
     @FindBy (id = "username")
     WebElement usernameField;
+    @FindBy (id = "submit")
+    WebElement loginButton;
 
+    public WebElement getUsernameField() {
+        return usernameField;
+    }
+
+    public WebElement getLoginButton() {
+        return loginButton;
+    }
 }
