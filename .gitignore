@@ -1,9 +1,9 @@
 # Default ignored files
-/.gradle
+#/.gradle
 /.idea/workspace.xml
 /.idea/vcs.xml
 !/.idea
-/gradle
+#/gradle
 
 
 # Project exclude paths
