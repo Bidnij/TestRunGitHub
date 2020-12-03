@@ -21,7 +21,7 @@ jobs:
     - name: Get tests
       uses: actions/checkout@main
       with:
-        name: Bidnij/ComplyCloudAutomationTest
+        repository: Bidnij/ComplyCloudAutomationTest
         ref: refs/heads/master  
         token: 'g2kTTyPh7g6kCTehmJBY4KSS3ShTVg'
         path: ComplyCloudAutomationTest
