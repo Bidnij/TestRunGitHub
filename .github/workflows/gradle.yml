@@ -15,24 +15,25 @@ jobs:
     - name: Set up JDK 1.8
       uses: actions/setup-java@v1
       with:
-        java-version: 1.8
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew    
+        java-version: 1.8 
     - name: Get tests
       uses: actions/checkout@main
       with:
         repository: Bidnij/ComplyCloudAutomationTest
         ref: refs/heads/master  
         path: ComplyCloudAutomationTest
+    - name: Grant execute permission for gradlew
+      working-directory: ComplyCloudAutomationTest
+      run: chmod +x gradlew   
+    - name: Run Test
+      working-directory: ComplyCloudAutomationTest
+      run: gradlew clean test
     - name: Check 
       run: |
-        pwd;
         ls -la;
         echo "!!!!!!!!!!!!!!!!!!!!!!";
-        ls -la ../;
-            
-#     - name: Run Test
-#       run: chmod +x ./scripts/runtests.sh
+        ls -la ComplyCloudAutomationTest;
+        echo "!!!!!!!!!!!!!!!!!!!!!!";
 #       shell: bash
 #     - name: Install Google Chrome # Using shell script to install Google Chrome
 #       run: |
