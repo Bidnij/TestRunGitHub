@@ -1,9 +1,9 @@
-##!/bin/sh -xe
+#!/bin/sh
 
 
-git clone https://bidnaymina@gmail.com:gamer31051995@github.com/Bidnij/ComplyCloudAutomationTest
+git clone https://Bidnij:gamer31051995@github.com/Bidnij/ComplyCloudAutomationTest
 
-cd TeamDenmark.AthleteApp.UIAutomationTest
+cd ComplyCloudAutomationTest
 
 ls -la
 
