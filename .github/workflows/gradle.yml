@@ -23,7 +23,6 @@ jobs:
       with:
         repository: Bidnij/ComplyCloudAutomationTest
         ref: refs/heads/master  
-        token: 'g2kTTyPh7g6kCTehmJBY4KSS3ShTVg'
         path: ComplyCloudAutomationTest
     - name: Check 
       run: |
