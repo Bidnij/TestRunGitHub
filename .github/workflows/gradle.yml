@@ -19,10 +19,12 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew    
     - name: Get tests
-      uses: actions/checkout@master
+      uses: actions/checkout@main
       with:
         name: Bidnij/ComplyCloudAutomationTest
         ref: refs/heads/master  
+        token: 'g2kTTyPh7g6kCTehmJBY4KSS3ShTVg'
+        path: ComplyCloudAutomationTest
     - name: Check 
       run: |
         pwd;
