@@ -8,7 +8,7 @@ on: [push]
 jobs:
   build:
 
-    runs-on: macos-latest
+    runs-on: MacBook-Pro-Mihail
 
     steps:
     - uses: actions/checkout@v2
