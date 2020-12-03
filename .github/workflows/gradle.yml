@@ -27,6 +27,8 @@ jobs:
       run: |
         pwd;
         ls -la;
+        echo "!!!!!!!!!!!!!!!!!!!!!!";
+        ls -la ../;
             
 #     - name: Run Test
 #       run: chmod +x ./scripts/runtests.sh
