@@ -24,7 +24,10 @@ jobs:
         path: ComplyCloudAutomationTest
     - name: Grant execute permission for gradlew
       working-directory: ComplyCloudAutomationTest
-      run: chmod +x gradlew   
+      run: |
+        pwd;
+        ls -la;
+        chmod +x gradlew   
     - name: Run Test
       working-directory: ComplyCloudAutomationTest
       run: gradlew clean test
