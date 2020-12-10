@@ -21,7 +21,7 @@ jobs:
       with:
         repository: Bidnij/ComplyCloudAutomationTest
         ref: refs/heads/master
-        token: rst!Kf*0agPnmSodUpMBpxxh
+        token: ${{ secrets.COMPLYCLOUDAUTOMATIONTEST }}
         path: ComplyCloudAutomationTest
     - name: Grant execute permission for gradlew
       working-directory: ComplyCloudAutomationTest
