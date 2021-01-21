@@ -1,0 +1,11 @@
+[ {
+  "uid" : "3578c0f830814e98",
+  "name" : "EmptyFieldssss",
+  "time" : {
+    "start" : 1611232459012,
+    "stop" : 1611232462006,
+    "duration" : 2994
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

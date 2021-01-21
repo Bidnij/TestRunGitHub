@@ -1,0 +1,30 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "AutorizationFlou",
+    "children" : [ {
+      "name" : "Autorization",
+      "children" : [ {
+        "name" : "ComplyCloudWebTest.LoginPageTest.StandartLoginTest",
+        "children" : [ {
+          "name" : "EmptyFieldssss",
+          "uid" : "3578c0f830814e98",
+          "parentUid" : "776115aae590975ececc05e082b9298b",
+          "status" : "passed",
+          "time" : {
+            "start" : 1611232459012,
+            "stop" : 1611232462006,
+            "duration" : 2994
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "776115aae590975ececc05e082b9298b"
+      } ],
+      "uid" : "9221631944b217b484d486e8845609a4"
+    } ],
+    "uid" : "a74b220631030c077fb77ae40e40d899"
+  } ]
+}

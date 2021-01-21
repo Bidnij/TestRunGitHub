@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Jan 21 12:34:19 UTC 2021","Thu Jan 21 12:34:22 UTC 2021","2994","AutorizationFlou","Autorization","ComplyCloudWebTest.LoginPageTest.StandartLoginTest","ComplyCloudWebTest.LoginPageTest.StandartLoginTest","EmptyFieldssss","EmptyFieldssss",""

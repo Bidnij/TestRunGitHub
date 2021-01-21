@@ -1,0 +1,22 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "ComplyCloudWebTest.LoginPageTest.StandartLoginTest",
+    "children" : [ {
+      "name" : "EmptyFieldssss",
+      "uid" : "3578c0f830814e98",
+      "parentUid" : "429035f27dca1bcf573e2fb448597131",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611232459012,
+        "stop" : 1611232462006,
+        "duration" : 2994
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "ComplyCloudWebTest.LoginPageTest.StandartLoginTest"
+  } ]
+}
