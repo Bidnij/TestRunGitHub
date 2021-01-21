@@ -34,22 +34,20 @@ jobs:
       run: |
         brew install allure
         ./gradlew clean test
-        ls -la
-        allure generate --clean
+        allure generate --clean ./build/allure-results
     - name: getAllure results
       uses: actions/checkout@main  
       with:
         ref: gh-pages 
         path: ComplyCloudAutomationTest/gh-pages
-    - name: gitConfig
+    - name: gitConfig and obtain files
       working-directory: ComplyCloudAutomationTest/gh-pages
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        ls -la ../
-        echo "======="
-        ls -la ../build/allure-results
-#        git commit -m "Add changes" -a
+        git commit -m "Add changes" -a
+        cp -R ../ComplyCloudAutomationTest/build/allure-results/* ./
+        ls -la 
 #     - name: Push changes
 #       uses: ad-m/github-push-action@master
 #       with:
