@@ -31,13 +31,22 @@ jobs:
       run: chmod +x gradlew   
     - name: Run Test
       working-directory: ComplyCloudAutomationTest
-      run: ./gradlew clean test
-    - name: Commit files
-#       working-directory: build/allure-results
+      run: |
+        ./gradlew clean test
+        allure generate --clean
+    - name: getAllure results
+      uses: actions/checkout@main  
+      with:
+        ref: gh-pages 
+        path: ComplyCloudAutomationTest/gh-pages
+    - name: gitConfig
+      working-directory: ComplyCloudAutomationTest/gh-pages
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        ls -la
+        ls -la ../
+        echo "======="
+        ls -la ../build/allure-results
 #        git commit -m "Add changes" -a
 #     - name: Push changes
 #       uses: ad-m/github-push-action@master
