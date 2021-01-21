@@ -33,7 +33,7 @@ jobs:
       working-directory: ComplyCloudAutomationTest
       run: ./gradlew clean test
     - name: Commit files
-      working-directory: build/allure-results
+#       working-directory: build/allure-results
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
