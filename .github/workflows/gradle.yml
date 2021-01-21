@@ -43,31 +43,24 @@ jobs:
     - name: gitConfig and obtain files
       working-directory: ComplyCloudAutomationTest/gh-pages
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
         cp -R ../allure-report/* ./
-        git add .
-        git commit -m "Add changes" -a
+        tar czvf ../allure-report-${GITHUB_SHA::7}.tar.gz ./*
     - name: Deploy pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.COMPLYCLOUDAUTOMATIONTEST }}
-        publish_dir: ComplyCloudAutomationTest/gh-pages
-#     - name: Push changes
-#       uses: ad-m/github-push-action@master
-#       with:
-#         github_token: "IdDjc7l$1isJnt78Kq*OW$1Y"
-#         branch: "main"
-#         directory: build/allure-results
+        publish_dir: ./ComplyCloudAutomationTest/gh-pages
+    
+    - name: Send mail
+      uses: dawidd6/action-send-mail@v2
+      with:
+        server_address: smtp.gmail.com
+        server_port: 465
+        username: ${{secrets.MAIL_USERNAME}}
+        password: ${{secrets.MAIL_PASSWORD}}
+        subject: Allure results
 
-#       shell: bash
-#     - name: Install Google Chrome # Using shell script to install Google Chrome
-#       run: |
-#        chmod +x ./scripts/InstallChrome.sh
-#         ./scripts/InstallChrome.sh
-
-
-
-#   - name: Build with Gradle
-#       run: ./gradlew test
-
+        body: "You can check results here: https://bidnij.github.io/TestRunGitHub"
+        to: kosar@ukad-group.com
+        from: unnamed1352@gmail.com
+        attachments: ComplyCloudAutomationTest/allure-report-${GITHUB_SHA::7}.tar.gz
