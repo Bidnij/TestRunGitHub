@@ -13,8 +13,8 @@ public class StandartLoginTest extends BaseTest {
         StandartLogin standartLogin = new StandartLogin(getDriver());
         standartLogin.openPage("login");
         Waiters.treadWaiter(2);
-        standartLogin.getUsernameField().sendKeys("");
-        standartLogin.getLoginButton().click();
+//         standartLogin.getUsernameField().sendKeys("");
+//         standartLogin.getLoginButton().click();
 
     }
 }
