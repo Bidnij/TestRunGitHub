@@ -33,6 +33,7 @@ jobs:
       working-directory: ComplyCloudAutomationTest
       run: |
         ./gradlew clean test
+        ls -la
         ./.allure/allure-2.2.1/bin/allure generate --clean
     - name: getAllure results
       uses: actions/checkout@main  
