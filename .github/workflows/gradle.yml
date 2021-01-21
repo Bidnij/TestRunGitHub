@@ -32,11 +32,12 @@ jobs:
     - name: Run Test
       working-directory: ComplyCloudAutomationTest
       run: ./gradlew clean test
-#     - name: Commit files
-#       working-directory: build/allure-results
-#       run: |
-#         git config --local user.email "action@github.com"
-#         git config --local user.name "GitHub Action"
+    - name: Commit files
+      working-directory: build/allure-results
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        ls -la
 #         git commit -m "Add changes" -a
 #     - name: Push changes
 #       uses: ad-m/github-push-action@master
