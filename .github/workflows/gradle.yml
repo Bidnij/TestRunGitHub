@@ -32,7 +32,7 @@ jobs:
     - name: Run Test
       working-directory: ComplyCloudAutomationTest
       run: |
-        brew install allure
+        HOMEBREW_NO_INSTALL_CLEANUP=1 brew install allure
         ./gradlew clean test
         allure generate --clean ./build/allure-results
     - name: getAllure results
@@ -45,7 +45,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        cp -R ../ComplyCloudAutomationTest/build/allure-results/* ./
+        cp -R ../build/allure-results/* ./
         ls -la 
 #        git commit -m "Add changes" -a
 #     - name: Push changes
