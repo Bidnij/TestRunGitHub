@@ -1,10 +1,10 @@
 [ {
-  "uid" : "acee3d98373da4f0",
+  "uid" : "b67658573e5f7acb",
   "name" : "EmptyFields",
   "time" : {
-    "start" : 1611237123735,
-    "stop" : 1611237126786,
-    "duration" : 3051
+    "start" : 1611237471788,
+    "stop" : 1611237475473,
+    "duration" : 3685
   },
   "status" : "passed",
   "severity" : "normal"

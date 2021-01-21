@@ -9,13 +9,13 @@
         "name" : "ComplyCloudWebTest.LoginPageTest.StandartLoginTest",
         "children" : [ {
           "name" : "EmptyFields",
-          "uid" : "acee3d98373da4f0",
+          "uid" : "b67658573e5f7acb",
           "parentUid" : "776115aae590975ececc05e082b9298b",
           "status" : "passed",
           "time" : {
-            "start" : 1611237123735,
-            "stop" : 1611237126786,
-            "duration" : 3051
+            "start" : 1611237471788,
+            "stop" : 1611237475473,
+            "duration" : 3685
           },
           "flaky" : false,
           "newFailed" : false,
