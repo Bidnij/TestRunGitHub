@@ -44,7 +44,6 @@ jobs:
       working-directory: ComplyCloudAutomationTest/gh-pages
       run: |
         cp -R ../allure-report/* ./
-        tar czvf ../allure-report-${GITHUB_SHA::7}.tar.gz ./*
     - name: Deploy pages
       uses: peaceiris/actions-gh-pages@v3
       with:
@@ -61,6 +60,5 @@ jobs:
         subject: Allure results
 
         body: "You can check results here: https://bidnij.github.io/TestRunGitHub"
-        to: kosar@ukad-group.com
+        to: mbi@compent.net
         from: unnamed1352@gmail.com
-        attachments: ComplyCloudAutomationTest/allure-report-${GITHUB_SHA::7}.tar.gz
