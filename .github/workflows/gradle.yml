@@ -45,9 +45,14 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        cp -R ../build/allure-results/* ./
-        ls -la 
-#        git commit -m "Add changes" -a
+        cp -R ../allure-report/* ./
+        git add .
+        git commit -m "Add changes" -a
+    - name: Deploy pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.COMPLYCLOUDAUTOMATIONTEST }}
+        publish_dir: ComplyCloudAutomationTest/gh-pages
 #     - name: Push changes
 #       uses: ad-m/github-push-action@master
 #       with:
